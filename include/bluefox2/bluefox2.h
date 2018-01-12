@@ -49,6 +49,9 @@ class Bluefox2 {
   void SetCpc(int &cpc) const;
   void SetCtm(int &ctm) const;
   void SetCts(int &cts) const;
+  void SetFlashMode(const int flash_mode) const;
+  void SetExposeLowerLimit(const int expose_lower_limit_us) const;
+  void SetExposeUpperLimit(const int expose_lower_limit_us) const;
 
   // Request
   void FillCaptureQueue(int &n) const;

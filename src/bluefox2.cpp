@@ -149,6 +149,12 @@ void Bluefox2::Configure(Bluefox2DynConfig &config) {
   SetCts(config.cts);
   // Request
   FillCaptureQueue(config.request);
+  // Flash Mode
+  SetFlashMode(config.flash_mode);
+  // Set Lower Exposure Limit
+  SetExposeLowerLimit(config.expose_lower_limit_us);
+  // Set Upper Exposure Limit
+  SetExposeUpperLimit(config.expose_upper_limit_us);
 
   // Cache this config
   config_ = config;
@@ -333,5 +339,33 @@ void Bluefox2::SetSlave() const {
   cam_set_->frameDelay_us.write(0);
   std::cout << serial() << ": slave" << std::endl;
 }
+
+void Bluefox2::SetFlashMode(const int flash_mode) const {
+  if (flash_mode == 0) {
+    cam_set_->flashMode.write(cfmDigout0);
+  } else if(flash_mode == 1) {
+    cam_set_->flashMode.write(cfmDigout1);
+  } else {
+    cam_set_->flashMode.write(cfmOff);
+  }
+  cam_set_->flashType.write(cftStandard);
+}
+
+void Bluefox2::SetExposeLowerLimit(const int lower_limit_us) const {
+  bool auto_exposure_on;
+  ReadProperty(cam_set_->autoExposeControl, auto_exposure_on);
+  if (auto_exposure_on) {
+    WriteProperty(cam_set_->autoControlParameters.exposeLowerLimit_us, lower_limit_us);
+  }
+}
+
+void Bluefox2::SetExposeUpperLimit(const int upper_limit_us) const {
+  bool auto_exposure_on;
+  ReadProperty(cam_set_->autoExposeControl, auto_exposure_on);
+  if (auto_exposure_on) {
+    WriteProperty(cam_set_->autoControlParameters.exposeUpperLimit_us, upper_limit_us);
+  }
+}
+
 
 }  // namespace bluefox2
