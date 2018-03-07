@@ -10,10 +10,12 @@ SingleNode::SingleNode(const ros::NodeHandle& pnh)
 void SingleNode::Acquire() {
   while (is_acquire() && ros::ok()) {
     bluefox2_ros_->RequestSingle();
-    const auto expose_us = bluefox2_ros_->camera().GetExposeUs();
-    const auto expose_duration = ros::Duration(expose_us * 1e-6 / 2);
-    const auto time = ros::Time::now() + expose_duration;
-    bluefox2_ros_->PublishCamera(time);
+    // This code is not used since we want the timestamp of the image to be at the end of the
+    // exposure period. Mid-frame sync is done in a separate node based on trigger time.
+    // const auto expose_us = bluefox2_ros_->camera().GetExposeUs();
+    // const auto expose_duration = ros::Duration(expose_us * 1e-6 / 2);
+    // const auto time = ros::Time::now() + expose_duration;
+    bluefox2_ros_->PublishCamera(ros::Time::now());
     Sleep();
   }
 }
@@ -21,10 +23,12 @@ void SingleNode::Acquire() {
 void SingleNode::AcquireOnce() {
   if (is_acquire() && ros::ok()) {
     bluefox2_ros_->RequestSingle();
-    const auto expose_us = bluefox2_ros_->camera().GetExposeUs();
-    const auto expose_duration = ros::Duration(expose_us * 1e-6 / 2);
-    const auto time = ros::Time::now() + expose_duration;
-    bluefox2_ros_->PublishCamera(time);
+    // This code is not used since we want the timestamp of the image to be at the end of the
+    // exposure period. Mid-frame sync is done in a separate node based on trigger time.
+    // const auto expose_us = bluefox2_ros_->camera().GetExposeUs();
+    // const auto expose_duration = ros::Duration(expose_us * 1e-6 / 2);
+    // const auto time = ros::Time::now() + expose_duration;
+    bluefox2_ros_->PublishCamera(ros::Time::now());
   }
 }
 
