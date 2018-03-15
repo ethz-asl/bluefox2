@@ -97,7 +97,7 @@ bool Bluefox2::GrabImage(sensor_msgs::Image &image_msg) {
     fi_->imageRequestUnlock(request_nr);
     return false;
   }
-
+  image_msg.header.stamp = ros::Time::now();
   std::string encoding;
   const auto bayer_mosaic_parity = request_->imageBayerMosaicParity.read();
   if (bayer_mosaic_parity != bmpUndefined) {
