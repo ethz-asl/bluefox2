@@ -98,6 +98,9 @@ bool Bluefox2::GrabImage(sensor_msgs::Image &image_msg) {
     return false;
   }
 
+  // This does not feel right, but we set the time of the image here such that
+  // it is (hopefully) just at the end of exposure.
+  image_msg.header.stamp = ros::Time::now();
   std::string encoding;
   const auto bayer_mosaic_parity = request_->imageBayerMosaicParity.read();
   if (bayer_mosaic_parity != bmpUndefined) {
