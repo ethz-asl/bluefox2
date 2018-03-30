@@ -1,0 +1,195 @@
+MATRIX VISION GmbH - Special Software License Agreement for mvIMPACT Acquire SDK
+camera driver software
+
+This Software License Agreement (Agreement) is a special legal Agreement between you and
+MATRIX VISION GmbH (MV) for the MATRIX VISION software product mvIMPACT Acquire
+SDK, which includes computer software and may include associated media, printed materials or
+online or electronic documentation. In addition to the provisions herein, the General Terms and
+Conditions ("Allgemeine Geschaeftsbedingungen") of MV, current status: November 2015, are
+applicable. In case of a conflict, the Agreement herein shall prevail.
+The license grant, is only valid, if you accept this Agreement and the General Terms and Conditions
+("Allgemeine Geschaeftsbedingungen") of MV, current status: November 2015, and in particular
+do not refer to or use General Conditions that in any way are in conflict with or provide
+additional conditions not provided herein. You may contact MV to obtain the current version
+(http://www.matrix-vision.com/de-agb.html but URL is subject to change).
+
+1. DEFINITIONS
+
+"Software" means all of the contents of the files provided by MV to you under the product name
+mvIMPACT Acquire SDK.
+"Documentation" means the User's Guides, User's Manuals and Reference Manuals, if any,
+accompanying delivery of the Software. Documentation may be delivered in printed and/or electronic
+and/or online forms.
+
+2. LICENSE GRANT
+
+The licensed Software and Documentation shall at all times remain the property of MV and/or its
+licensors, and you, as licensee, shall have no right, title, or interest in the Software, except as
+expressly set forth in this Agreement.
+
+a) Use with MV Hardware
+
+MV grants to you a nonexclusive license to install and use the Software as provided herein on
+the applicable hardware.
+
+b) Use with Third Party Hardware as a courtesy
+
+MV grants to you free of charge, as a courtesy a nonexclusive, revocable license to install and
+use the Software as provided herein with third party hardware, i.e. hardware not manufactured
+or delivered to you by MV under the following conditions:
+- Any of your contractual rights related to products acquired by you from MV, in particular but
+not limited to delivery, defects, support, updates, documentation, transfer shall not apply.
+- MV has neither designed nor tested the Software for its use with Third Party Hardware and,
+therefore, you install and use the Software at your own risk.
+- The provisions related to Donations (sec. 516 et seq. of the German Civil Code) shall apply
+instead of the provisions regarding defects and liability of the General Terms and Conditions
+("Allgemeine Geschaeftsbedingungen") of MV and this agreement..
+
+2.3. COMPLIANCE WITH LICENSE
+
+You agree that upon request from MV or MV's authorized representative, you will within thirty
+(30) days fully document and certify that use of any and all MV Software at the time of the request
+is in conformity with your valid license from MV.
+
+2.4. DOCUMENTATION
+You may make and use a reasonable number of copies of any Documentation, provided that
+such copies shall be used only for internal purposes and are not to be republished or distributed
+(either in hard copy or electronic form) beyond your premises.
+
+2.7 SYSTEM ENVIRONMENT
+
+You are responsible for providing the system environment in accordance with the system requirements
+for Software.
+
+2.8 SUBLICENCES
+
+You may sublicense the Software only upon prior written consent by MV. In case such consent
+is given by MV to you, you are obliged to sublicense the Software with a license whose terms
+and conditions are at least as restrictive as the terms in this Agreement.
+
+3. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+
+3.1. RENTAL
+
+You may not rent, lease or lend the Software.
+
+3.2. SOFTWARE TRANSFER
+
+Except as may be expressly prohibited herein, you may transfer all your rights to use the Software
+to a third party provided that (1) you also transfer all your obligations out of this Agreement,
+the Software and all other software bundled with the Software, including all copies, updates
+and prior versions, to such third party; (2) you retain no copies, including backups and
+copies stored on a computer; and (3) the receiving party accepts the terms and conditions upon
+which you legally obtained a license to the Software.
+
+3.3. BACKUP COPY
+
+You may make a reasonable number of copies of the Software to backup devices such as hard
+disks, optical media, or tape and a reasonable number of physical DVD media backup copies of
+the Software solely to replace the original copy provided to you if the original copy is damaged
+or destroyed. All rights not specifically granted to you herein are retained by MV.
+
+3.4. LIMITATION ON REVERSE ENGINEERING, DECOMPILATION, DISASSEMBLY AND
+
+MODIFICATION
+You may not reverse engineer, decompile, disassemble or otherwise attempt to discover the
+source code of the Software, except to the extent you may be expressly and mandatorily permitted
+under applicable law, it is essential to do so in order to achieve interoperability of the Software
+with another software program, and you have first requested MV to provide the information
+necessary to achieve such interoperability and MV has not made such information available.
+Any information supplied by MV or obtained by you, as permitted hereunder, may only be used
+by you for the purpose described herein and may not be disclosed to any third party.
+You may not modify, adapt, or otherwise alter the Software except as expressly permitted herein.
+In particular, you may not attempt to remove the license protection mechanism from the
+Software.
+
+3.5. TRADEMARKS
+
+This Agreement does not grant you any rights in connection with any trademarks or service
+marks of MV or of MV's suppliers. You may not use the name, trademarks, or service marks of
+MV or of MV's suppliers in any advertising, promotional literature or any other material, whether
+in written, electronic, or other form, distributed to any third party, except as expressly permitted
+by MV.
+
+3.6. UPGRADES
+
+If the Software is an upgrade to a previous version of the Software, any obligation MV may have
+to support the previous version of the Software may be ended within one (1) year upon availability
+of the upgrade.
+
+3.7. LICENSE FOR THIRD PARTY SOFTWARE
+
+MV has been granted licenses to distribute certain third party software. As a condition of those
+licenses, MV is required to distribute the software subject to specific terms and conditions,
+which may be different from or additional to those contained herein for MV's Software. You understand
+and agree that acceptance of this Agreement also confirms your acceptance of the
+applicable provisions for use, including the restrictions on use, of such third party software. You
+may contact MV to obtain the current applicable provisions. Any breach of the applicable provisions
+of any third party's license terms shall also be considered a material breach of this
+Agreement.
+
+3.8. TERMINATION
+
+Without prejudice to any other rights, MV may terminate this Agreement for good cause if you
+fail to comply with the terms and conditions of this Agreement. In such event, you must destroy
+all copies of the Software and all of its components.
+
+4. INTELLECTUAL PROPERTY RIGHTS
+
+The Software is protected by copyright and other intellectual property laws and treaties. All title
+and intellectual property rights in and to the Software, including, but not limited to, any digital
+images or example programs, incorporated into the Software, the Documentation and any copies
+of the Software are owned by MV or its suppliers. The Software is licensed, not sold.
+
+5. RIGHTS IN CASE OF DEFECTS
+
+In addition to the provisions regarding the rights in case of defects of the General Terms and
+Conditions ("Allgemeine Geschaeftsbedingungen") of MV the following provisions shall be applicable:
+
+5.1 Defects must be notified in writing and, unless it is an unreasonable burden, with a comprehensible
+
+description of the error symptoms, as far as possible evidenced by written recordings,
+hard copies or other documents demonstrating the defects. The notification of the defect should
+enable the reproduction of the error.
+
+5.2 Subsequent performance may also take place through the delivery or installation of a new
+
+program version or a reasonable work-around of the Software. If the defect does not or not substantially
+impair the functionality, then MV is entitled, to remedy the defect by delivering a new
+version or an update within a reasonable time as part of its version, update and upgrade planning.
+
+9. HAZARDOUS USES
+
+The Software is not designed and/or intended for use in connection with any application requiring
+fail-safe performance such as the operation of nuclear power facilities, air traffic control or
+navigation systems, weapon control systems, life support systems, or any other system whose
+failure could lead to death, personal injury, or severe physical or environmental damage. You
+agree that MV will have no responsibility of any nature, and you are solely responsible for any
+expense, loss, injury or damage incurred as a result of such use of the Software.
+
+10. ENTIRE AGREEMENT
+
+This Agreement contains the entire, final and exclusive understanding between MV and you,
+and may not be modified or amended except by written instrument, executed by authorized representatives
+of MV and you. Amendments or additions to this Agreement must be made in writing
+to be effective. This shall also apply to amendments of this written form requirement.
+
+11. APPLICABLE LAW
+
+This Agreement is governed by the laws of Germany except for the UN Sales Convention (United
+Nations Convention on Contracts for the International Sale of Goods dated 11.4.1980).
+
+12. LEGAL VENUE
+
+The courts in Stuttgart/Germany shall have exclusive jurisdiction over all disputes under and in
+connection with this Agreement, provided that you are a merchant within the meaning of the
+German Commercial Code or if upon the commencement of legal proceedings, you have no
+place of business or ordinary residence in the Federal Republic of Germany.
+
+13. SEVERABILITY
+
+If any provisions of this license is held to be illegal, invalid or enforceable for any reason, then
+such provision will be enforced to the maximum extent permissible and the remainder of the
+provisions of this license will remain in full force and effect.
+
+Status: November 2015
