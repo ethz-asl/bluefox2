@@ -15,7 +15,7 @@ void SingleNode::Acquire() {
     // const auto expose_us = bluefox2_ros_->camera().GetExposeUs();
     // const auto expose_duration = ros::Duration(expose_us * 1e-6 / 2);
     // const auto time = ros::Time::now() + expose_duration;
-    bluefox2_ros_->PublishCamera(ros::Time::now());
+    bluefox2_ros_->PublishCameraNumbered(ros::Time::now());
     Sleep();
   }
 }
@@ -28,7 +28,7 @@ void SingleNode::AcquireOnce() {
     // const auto expose_us = bluefox2_ros_->camera().GetExposeUs();
     // const auto expose_duration = ros::Duration(expose_us * 1e-6 / 2);
     // const auto time = ros::Time::now() + expose_duration;
-    bluefox2_ros_->PublishCamera(ros::Time::now());
+    bluefox2_ros_->PublishCameraNumbered(ros::Time::now());
   }
 }
 

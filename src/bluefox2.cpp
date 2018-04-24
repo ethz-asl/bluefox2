@@ -120,6 +120,57 @@ bool Bluefox2::GrabImage(sensor_msgs::Image &image_msg) {
   return true;
 }
 
+bool Bluefox2::GrabImageNumbered(sensor_msgs::Image &image_msg,
+                                 unsigned long& image_nubmer) {
+  // NOTE: A request object is locked for the driver whenever the corresponding
+  // wait function returns a valid request object.
+  // All requests returned by
+  // mvIMPACT::acquire::FunctionInterface::imageRequestWaitFor need to be
+  // unlocked no matter which result mvIMPACT::acquire::Request::requestResult
+  // contains.
+  // http://www.matrix-vision.com/manuals/SDK_CPP/ImageAcquisition_section_capture.html
+
+  int request_nr = INVALID_ID;
+  request_nr = fi_->imageRequestWaitFor(timeout_ms_);
+
+  // Check if request is valid
+  if (!fi_->isRequestNrValid(request_nr)) {
+    // We do not need to unlock here because the request is not valid?
+    fi_->imageRequestUnlock(request_nr);
+    return false;
+  }
+
+  request_ = fi_->getRequest(request_nr);
+
+  // Check if request is ok
+  if (!request_->isOK()) {
+    // need to unlock here because the request is valid even if it is not ok
+    fi_->imageRequestUnlock(request_nr);
+    return false;
+  }
+
+  // This does not feel right, but we set the time of the image here such that
+  // it is (hopefully) just at the end of exposure.
+  image_msg.header.stamp = ros::Time::now();
+  std::string encoding;
+  const auto bayer_mosaic_parity = request_->imageBayerMosaicParity.read();
+  if (bayer_mosaic_parity != bmpUndefined) {
+    // Bayer pattern
+    const auto bytes_per_pixel = request_->imageBytesPerPixel.read();
+    encoding = BayerPatternToEncoding(bayer_mosaic_parity, bytes_per_pixel);
+  } else {
+    encoding = PixelFormatToEncoding(request_->imagePixelFormat.read());
+  }
+  sensor_msgs::fillImage(image_msg, encoding, request_->imageHeight.read(),
+                         request_->imageWidth.read(),
+                         request_->imageLinePitch.read(),
+                         request_->imageData.read());
+  image_nubmer = request_->infoFrameNr.read();
+  // Release capture request
+  fi_->imageRequestUnlock(request_nr);
+  return true;
+}
+
 void Bluefox2::Configure(Bluefox2DynConfig &config) {
   // Clear request queue
   fi_->imageRequestReset(0, 0);

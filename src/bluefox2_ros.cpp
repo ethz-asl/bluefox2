@@ -30,4 +30,9 @@ bool Bluefox2Ros::Grab(const sensor_msgs::ImagePtr& image_msg,
   return bluefox2_.GrabImage(*image_msg);
 }
 
+bool Bluefox2Ros::GrabNumbered(const sensor_msgs::ImagePtr& image_msg,
+                               unsigned long& image_number) {
+  return bluefox2_.GrabImageNumbered(*image_msg, image_number);
+}
+
 }  // namespace bluefox2
