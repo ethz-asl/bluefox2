@@ -7,7 +7,9 @@ int main(int argc, char **argv) {
   try {
     bluefox2::SingleNode single_node(pnh);
     single_node.Run();
-    ros::spin();
+    while (ros::ok()) {
+      ros::spinOnce();
+    }
     single_node.End();
   }
   catch (const std::exception &e) {

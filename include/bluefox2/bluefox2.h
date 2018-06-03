@@ -24,6 +24,8 @@ class Bluefox2 {
   void RequestSingle() const;
   void Configure(Bluefox2DynConfig &config);
   bool GrabImage(sensor_msgs::Image &image_msg);
+  bool GrabImageNumbered(sensor_msgs::Image &image_msg,
+                         unsigned long& image_number);
 
   void SetMM(int mm) const;
   void SetMaster() const;
