@@ -5,7 +5,7 @@ REPO_NAME=mvimpact_acquire
 CLONE_DIR=/tmp
 
 cd ${CLONE_DIR}
-git clone https://github.com/versatran01/${REPO_NAME}.git
+git clone https://github.com/ethz-asl/${REPO_NAME}.git
 cd ${REPO_NAME}
 PLATFORM=$(uname -i)
 if [[ ${PLATFORM} == "x86_64" ]] ; then
