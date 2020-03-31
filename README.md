@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/KumarRobotics/bluefox2.svg?branch=master)](https://travis-ci.org/KumarRobotics/bluefox2)
 
 # Bluefox2
-*This driver depends on package [`camera_base`](https://github.com/KumarRobotics/camera_base)*
+*This driver depends on package [`camera_base`](https://github.com/ethz-asl/camera_base/tree/feature/image_with_sequence_number)*
 
 https://github.com/KumarRobotics/bluefox2
 
